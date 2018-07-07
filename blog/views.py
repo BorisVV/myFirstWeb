@@ -4,7 +4,8 @@ from django.shortcuts import \
 from django.utils import timezone
 
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, UserSignInForm, UserSignUpForm
+from django.contrib import messages
 
 # Create your views here
 
@@ -25,7 +26,7 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            # post.published_date = timezone.now()
+            post.published_date = timezone.now()
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -56,3 +57,33 @@ def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
     return redirect('post_detail', pk=pk)
+
+def login(request):
+    if request.method == 'POST':
+        user_signIn_form = UserSignInForm(request.POST)
+        if user_signIn_form.is_valid():
+            user_signIn_form.save()
+            messages.success(request, 'You have signed in succesfully!')
+            return redirect('blog/post_detail')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        user_signIn_form = UserSignInForm()
+    return render(request, 'blog/login.html', {'user_signIn_form': user_signIn_form})
+
+
+def logout(request):
+    pass
+
+def sign_up(request):
+    if request.method == 'POST':
+        user_signUp_form = UserSignUpForm(request.POST)
+        if user_signUp_form.is_valid():
+            user_signUp_form.save()
+            messages.success(request, 'Sign Up completed!!!')
+            return redirect('blog/post_detail')
+        else:
+            messages.error(request, 'Please correct the error.')
+    else:
+        user_signUp_form = UserSignUpForm()
+    return render(request, 'blog/sign_up.html', {'user_signUp_form': user_signUp_form})
