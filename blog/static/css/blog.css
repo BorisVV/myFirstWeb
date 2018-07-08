@@ -1,15 +1,11 @@
-h1  {
-    color: #FCA205;
-    font-family: 'Lobster';
-}
-
 body {
     padding-left: 15px;
     padding-right: 15px;
 }
 .page-header {
     background-color: #ff9400;
-    margin-top: 0;
+    font-family: 'Lobster', cursive;
+    margin-top: 10;
     padding: 20px 20px 20px 40px;
 }
 
@@ -20,11 +16,12 @@ body {
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 20px;
+    font-size: 12pt;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+
 }
 
 .date {
@@ -42,8 +39,8 @@ h1, h2, h3, h4 {
 .top-menu, .top-menu:hover, .top-menu:visited {
     /* color: #ffffff; */
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    font-size: 15pt;
+    margin-right: 15px;
 }
 
 .post {
