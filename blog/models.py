@@ -3,14 +3,7 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
-    user_name = models.CharField(max_length=50)
-    email = models.CharField(max_length=200)
-    password = models.CharField(max_length=200)
-    date_joined = models.DateTimeField(default=timezone.now)
-    #is_staff = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.user_name
+    pass
 
 class Post(models.Model):
     author_name = models.ForeignKey(CustomUser, on_delete=models.CASCADE)

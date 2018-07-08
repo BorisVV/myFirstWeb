@@ -57,18 +57,18 @@ def post_publish(request, pk):
     post.publish()
     return redirect('post_detail', pk=pk)
 
-def login(request):
-    if request.method == 'POST':
-        user_signIn_form = UserLoginForm(request.POST)
-        if user_signIn_form.is_valid():
-            user_signIn_form.save()
-            messages.success(request, 'You have signed in succesfully!')
-            return redirect('blog/post_detail')
-        else:
-            messages.error(request, 'Please correct the error below.')
-    else:
-        user_signIn_form = UserLoginForm()
-    return render(request, 'blog/login.html', {'user_signIn_form': user_signIn_form})
+# def login(request):
+#     if request.method == 'POST':
+#         user_signIn_form = UserLoginForm(request.POST)
+#         if user_signIn_form.is_valid():
+#             user_signIn_form.save()
+#             messages.success(request, 'You have signed in succesfully!')
+#             return redirect('blog/post_detail')
+#         else:
+#             messages.error(request, 'Please correct the error below.')
+#     else:
+#         user_signIn_form = UserLoginForm()
+#     return render(request, 'blog/login.html', {'user_signIn_form': user_signIn_form})
 
 
 def logout(request):
@@ -81,8 +81,8 @@ def sign_up(request):
             user_signUp_form.save()
             messages.success(request, 'Sign Up completed!!!')
             return redirect('blog/post_detail')
-        else:
-            messages.error(request, 'Please correct the error.')
+        # else:
+        #     messages.error(request, 'Please correct the error.')
     else:
         user_signUp_form = UserSignUpForm()
     return render(request, 'blog/sign_up.html', {'user_signUp_form': user_signUp_form})
