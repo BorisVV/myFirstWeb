@@ -14,32 +14,37 @@
       </div>
       <div class="content container">
         <div class="top-menu">
-          {% block login %}
-            {% if request.session %}
-            <a href="{% url 'login' %}">Login</a>
-            <p>or</p>
-            <a href="{% url 'sign_up' %}">Sign Up</a>
-            {% else %}
-            <a href="{% url 'logout' %}">Logout</a>
-            {% endif %}
-          {% endblock %}
+          <ul class="sidebar-nav">
+           {% block authenticate %}
+             {% if user.is_authenticated %}
+               <li>User: {{ user.get_username }}</li>
+               <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+             {% else %}
+               <li><a href="{% url 'login'%}">Login</a></li>
+               <p>or</p>
+               <li><a href="{% url 'sign_up'%}?next={{request.path}}">Signup</a></li>
+           {% endif %}
+           {% endblock %}
+          </ul>
         </div>
         <div class="col-md-8">
           <div class="content">
             {% block posts %}
             <a href="{% url 'post_new' %}" class="">Add new posts<span class="glyphicon glyphicon-plus"></span></a>
             {% endblock %}
-              {% block message %}
-                {% if messages %}
+            {% block message %}
+              {% if messages %}
                 <ul class="messages">
                     {% for message in messages %}
                     <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                     {% endfor %}
                 </ul>
-                {% endif %}
-              {% endblock %}
+              {% endif %}
+            {% endblock %}
+
             {% block content %}
             {% endblock %}
+
           </div>
         </div>
       </div>

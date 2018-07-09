@@ -2,25 +2,46 @@
 
 {% block login %}{% endblock %}
 {% block posts %}{% endblock %}
+{% block message %}{{ message }}{% endblock %}
+{% block authenticate %}{% endblock %}
+
 
 {% block content %}
+
+  {% if next %}
+      {% if user.is_authenticated %}
+      <p>You're authenticated.</p>
+      {% else %}
+      <p>Please login to see the page.</p>
+      {% endif %}
+  {% endif %}
+
   <h2>"Please Sign In Below"</h2>
   <form method="post" action="{% url 'login' %}">
-  {% csrf_token %}
+    {% csrf_token %}
 
-  <div>
-    <td>{{ form.username.label_tag }}</td>
-    <td>{{ form.username }}</td>
-  </div>
-  <div>
-    <td>{{ form.password.label_tag }}</td>
-    <td>{{ form.password }}</td>
-  </div>
+    {% if form.errors %}
+        <small style="color: red">Your username or password not found! Try again or Signup.</small><br>
+    {% endif %}
 
-  <div>
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="{{ next }}" />
-  </div>
+    <div>
+      <td>{{ form.username.label_tag }}</td>
+      <td>{{ form.username }}</td>
+    </div>
+    <div>
+      <td>{{ form.password.label_tag }}</td>
+      <td>{{ form.password }}</td>
+    </div>
+
+    <div>
+      <input type="submit" value="login" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </div>
   </form>
-  <a href="/" class="">Go to Home Page<span class=""></span></a>
+
+  <p>or</p>
+  <u>
+    <li><a href="{% url 'sign_up'%}?next={{request.path}}">Sign Up</a></li>
+    <li><a href="/" class="">Go to Home Page</a></li>
+  </u>
 {% endblock %}
