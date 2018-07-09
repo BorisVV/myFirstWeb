@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+
+{% block login %}{% endblock %}
+{% block posts %}{% endblock %}
+{% block message %}{{ message }}{% endblock %}
+{% block authenticate %}{% endblock %}
+
+{% block content %}
+  <h2>"Please Sign Up Below"</h2>
+  <form method="post" action="{% url 'sign_up' %}">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {% for error in field.errors %}
+        <small style="color: red">{{ error }}</small><br>
+        {% endfor %}
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text|safe }}</small>
+        {% endif %}
+      </p>
+    {% endfor %}
+    <button type="submit">Sign Up</button>
+    <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+  </form>
+
+  <p>or</p>
+  <u>
+    <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+    <li><a href="/" class="">Go to Home Page</a></li>
+  </u>
+{% endblock %}
