@@ -9,27 +9,19 @@
     font-family: 'Lobster', cursive;
     margin-left: 20px;
     margin-top: 5;
-    padding: 20px 20px 20px 20px; 
+    padding: 20px 20px 20px 20px;
 }
 
 .top-right {
   font-size: 30pt;
   color: #ffffff;
   float: right;
-
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
-}
-
-.content {
-    display: block;
-    margin-left: 20px;
-    font-size: 12pt;
-    background: #dddddd;
 }
 
 .date {

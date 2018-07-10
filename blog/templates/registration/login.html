@@ -1,11 +1,6 @@
 {% extends 'blog/base.html' %}
 
-{% block login %}{% endblock %}
-{% block posts %}{% endblock %}
-{% block message %}{{ message }}{% endblock %}
-
 {% block content %}
-
   {% if next %}
       {% if user.is_authenticated %}
       <p>You're authenticated.</p>

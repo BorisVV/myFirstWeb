@@ -16,27 +16,23 @@
         <div class="top-menu">
            {% block authenticate %}
              {% if user.is_authenticated %}
-               <p>User: {{ user.get_username }}</p>
-               <a href="{% url 'logout'%}?next={{request.path}}">Logout</a><br>
-               <a href="{% url 'home' %}" class="">Go to Home Page</a>
+              <p>User: {{ user.get_username }}</p>
+              <a href="{% url 'logout' %}?next={{request.path}}">Logout</a><br>
+              <a href="{% url 'home' %}" class="">Go to Home Page</a>
              {% else %}
-               <a href="{% url 'login'%}?next={{request.path}}">Login</a> /
-               <a href="{% url 'sign_up'%}?next={{request.path}}">Signup</a> /
-               <a href="{% url 'home' %}" class="">Go to Home Page</a>
+              <a href="{% url 'sign_up' %}">Signup</a> /
+              <a href="{% url 'login' %}">Login</a> /
+              <a href="{% url 'home' %}" class="">Go to Home Page</a>
              {% endif %}
            {% endblock %}
         </div>
         <div class="content">
           <ul>
-            {% block message %}
-              {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-              {% endif %}
-            {% endblock %}
+            {% if messages %}
+            {% for message in messages %}
+              <li class="{{ message.tags }}">{{ message|safe }}</li>
+            {% endfor %}
+            {% endif %}
 
             {% block content %}
             {% endblock %}
