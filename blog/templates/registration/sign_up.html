@@ -3,7 +3,6 @@
 {% block login %}{% endblock %}
 {% block posts %}{% endblock %}
 {% block message %}{{ message }}{% endblock %}
-{% block authenticate %}{% endblock %}
 
 {% block content %}
   <h2>"Please Sign Up Below"</h2>
@@ -22,12 +21,6 @@
       </p>
     {% endfor %}
     <button type="submit">Sign Up</button>
-    <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+    <input type="hidden" name="next" value="{{ next }}" />
   </form>
-
-  <p>or</p>
-  <u>
-    <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-    <li><a href="/" class="">Go to Home Page</a></li>
-  </u>
 {% endblock %}

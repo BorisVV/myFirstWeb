@@ -8,30 +8,26 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-      <div class="page-header">
-        <!-- <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a> -->
-        <h1><a href="/">Django Girls Blog</a></h1>
-      </div>
-      <div class="content container">
+      <div class="body-content">
+        <div class="page-header">
+          <a href="{% url 'post_draft_list' %}" class="top-right"><span class="glyphicon glyphicon-edit"></span></a>
+          <h1><a href="{% url 'home' %}">Django Girls Blog</a></h1>
+        </div>
         <div class="top-menu">
-          <ul class="sidebar-nav">
            {% block authenticate %}
              {% if user.is_authenticated %}
-               <li>User: {{ user.get_username }}</li>
-               <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+               <p>User: {{ user.get_username }}</p>
+               <a href="{% url 'logout'%}?next={{request.path}}">Logout</a><br>
+               <a href="{% url 'home' %}" class="">Go to Home Page</a>
              {% else %}
-               <li><a href="{% url 'login'%}">Login</a></li>
-               <p>or</p>
-               <li><a href="{% url 'sign_up'%}?next={{request.path}}">Signup</a></li>
-           {% endif %}
+               <a href="{% url 'login'%}?next={{request.path}}">Login</a> /
+               <a href="{% url 'sign_up'%}?next={{request.path}}">Signup</a> /
+               <a href="{% url 'home' %}" class="">Go to Home Page</a>
+             {% endif %}
            {% endblock %}
-          </ul>
         </div>
-        <div class="col-md-8">
-          <div class="content">
-            {% block posts %}
-            <a href="{% url 'post_new' %}" class="">Add new posts<span class="glyphicon glyphicon-plus"></span></a>
-            {% endblock %}
+        <div class="content">
+          <ul>
             {% block message %}
               {% if messages %}
                 <ul class="messages">
@@ -44,8 +40,7 @@
 
             {% block content %}
             {% endblock %}
-
-          </div>
+          </ul>
         </div>
       </div>
     </body>

@@ -10,9 +10,12 @@ from .models import Post, CustomUser
 
 # Create your views here
 
+def home(request):
+    return render(request, 'blog/home.html')
+
 def post_list(request):
-    post = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'post': post})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -27,7 +30,8 @@ def post_new(request):
             post.author_name = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('post_new', pk=post.pk)
+            messages.success(request, 'Message saved!!')
+            return redirect('post_new')
     else:
         form = PostForm()
     return render(request, 'blog/post_new.html', {'form': form})
@@ -64,7 +68,7 @@ def login(request):
     if user is not None:
         auth_login(request, user)
         messages.success(request, 'You have signed in succesfully!')
-        return redirect('blog/post_detail')
+        return redirect('blog/home')
     else:
         # Return an 'invalid login' error message.
         messages.error(request, 'Please correct the error below.')
@@ -83,7 +87,7 @@ def sign_up(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             auth_login(request, user)
-            return redirect('blog/post_detail')
+            return redirect('blog/home')
     else:
         form = UserSignUpForm()
     return render(request, 'registration/sign_up.html', {'form': form})

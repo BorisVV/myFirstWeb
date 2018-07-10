@@ -3,8 +3,6 @@
 {% block login %}{% endblock %}
 {% block posts %}{% endblock %}
 {% block message %}{{ message }}{% endblock %}
-{% block authenticate %}{% endblock %}
-
 
 {% block content %}
 
@@ -38,10 +36,4 @@
       <input type="hidden" name="next" value="{{ next }}" />
     </div>
   </form>
-
-  <p>or</p>
-  <u>
-    <li><a href="{% url 'sign_up'%}?next={{request.path}}">Sign Up</a></li>
-    <li><a href="/" class="">Go to Home Page</a></li>
-  </u>
 {% endblock %}
