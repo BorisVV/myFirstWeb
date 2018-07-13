@@ -12,9 +12,10 @@ from .managers import UserManager
 from django.conf import settings
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField('username', unique=True)
+    username = models.CharField(_('username'), max_length=100, unique=True)
     email = models.EmailField(_('email address'), unique=True)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
+    is_staff = models.BooleanField(_('is staff?'), default=False)
     is_active = models.BooleanField(_('active'), default=True)
 
     objects = UserManager()

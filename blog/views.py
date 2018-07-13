@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from .forms import PostForm, UserSignUpForm, UserLoginForm
-from .models import Post, CustomUser
+from .models import Post, User
 
 # Create your views here
 
