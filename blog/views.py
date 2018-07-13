@@ -48,7 +48,8 @@ def post_edit(request, pk):
             post.author_name = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            messages.success(request, 'Post "' + post.title + '" was updated succesfully!!')
+            return redirect('post_list')
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
