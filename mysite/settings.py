@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 ]
 
 # This to use the custom user model by using the subClass (AbstractUser)
-AUTH_USER_MODEL = 'blog.CustomUser'
+AUTH_USER_MODEL = 'blog.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
