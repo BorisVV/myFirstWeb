@@ -1,0 +1,24 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+  <br>
+  <div class="container-fluid"  >
+    <h3>Testing jQuery</h3>
+    <div class="" id="divID"></div>
+
+    <h3>Changing the background color on click</h3>
+    <div id="divTest" onclick="changeColor()" style="cursor: pointer; with: 300px; Height: 20px; background-color: #cccccc;">
+    Click here to change the background color.
+    </div>
+
+    <h3>Selecting the first and last tag</h3>
+    <div>
+      <p>I love jQuery 1 time</p>
+      <p>I love jQuery 2 time</p>
+      <p>I love jQuery 3 time</p>
+    </div>
+    <input type="button" value="Click Me" onclick="setCSS()"></input>
+
+
+  </div>
+{% endblock %}

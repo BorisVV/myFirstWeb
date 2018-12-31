@@ -14,4 +14,6 @@ urlpatterns = [
     url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
     url(r'^drafts/$', views.post_draft_list, name='post_draft_list'),
     url(r'^post/(?P<pk>\d+)/publish/$', views.post_publish, name='post_publish'),
+    url(r'^testing_JQuery/', views.testing_JQuery, name=
+    'testing_JQuery'),
 ]

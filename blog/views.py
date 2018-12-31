@@ -94,3 +94,6 @@ def sign_up(request):
     else:
         form = UserSignUpForm()
     return render(request, 'registration/sign_up.html', {'form': form})
+
+def testing_JQuery(request):
+    return render(request, 'blog/testingJQuery.html')
