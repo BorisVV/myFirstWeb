@@ -1,43 +1,50 @@
 {% load staticfiles %}
 <html>
-    <head>
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-      <div class="body-content">
-        <div class="page-header">
-          <a href="{% url 'post_draft_list' %}" class="top-right"><span class="glyphicon glyphicon-edit"></span></a>
-          <h1><a href="{% url 'home' %}">Django Girls Blog</a></h1>
-        </div>
-        <div class="top-menu">
-           {% block authenticate %}
-             {% if user.is_authenticated %}
-              <p>User: {{ user.get_username }}</p>
-              <a href="{% url 'logout' %}?next={{request.path}}">Logout</a><br>
-              <a href="{% url 'home' %}" class="">Go to Home Page</a>
-             {% else %}
-              <a href="{% url 'sign_up' %}">Signup</a> /
-              <a href="{% url 'login' %}">Login</a> /
-              <a href="{% url 'home' %}" class="">Go to Home Page</a>
-             {% endif %}
-           {% endblock %}
-        </div>
-        <div class="content">
-          <ul>
-            {% if messages %}
-            {% for message in messages %}
-              <li class="{{ message.tags }}">{{ message|safe }}</li>
-            {% endfor %}
-            {% endif %}
+  <head>
+    <title>First Website</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-            {% block content %}
-            {% endblock %}
-          </ul>
-        </div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/blog.js' %}" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div class="body-content">
+      <div class="page-header">
+        <a href="{% url 'post_draft_list' %}" class="top-right"><span class="glyphicon glyphicon-edit"></span></a>
+        <h1><a href="{% url 'home' %}">My First Website</a></h1>
       </div>
-    </body>
+      <div class="top-menu">
+         {% block authenticate %}
+           {% if user.is_authenticated %}
+            <p>User: {{ user.get_username }}</p>
+            <a href="{% url 'logout' %}?next={{request.path}}">Logout</a><br>
+            <a href="{% url 'home' %}" class="">Go to Home Page</a>
+           {% else %}
+            <a href="{% url 'sign_up' %}">Signup</a> /
+            <a href="{% url 'login' %}">Login</a> /
+            <a href="{% url 'home' %}" class="">Go to Home Page</a>
+           {% endif %}
+         {% endblock %}
+      </div>
+      <div class="content">
+        <ul>
+          {% if messages %}
+          {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message|safe }}</li>
+          {% endfor %}
+          {% endif %}
+
+          {% block content %}
+          {% endblock %}
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
