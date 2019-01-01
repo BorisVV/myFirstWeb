@@ -12,12 +12,108 @@
     </div>
 
     <h3>Selecting the first and last tag</h3>
-    <div>
+    <div id="tags">
       <p>I love jQuery 1 time</p>
       <p>I love jQuery 2 time</p>
       <p>I love jQuery 3 time</p>
     </div>
     <input type="button" value="Click Me" onclick="setCSS()"></input>
+
+    <br><br>
+    <h3>Change color and font function.</h3>
+    <div id="addClasses">
+      <p>PHP in 8 Hours</p>
+      <p>JQuery in 8 Hours</p>
+      <p>JavaScript in 8 Hours</p>
+    </div>
+    <form>
+      <input type="button" name="" value="Add Color" onclick="myFunction()"></input>
+    </form>
+
+    <h3>Show the text onclick</h3>
+    <div onclick="showText()" style="cursor: pointer;">
+      Click here.
+    </div>
+    <div class="divMsgShow" style="background-color: green; display: none; color: white;"> This is a Testing......
+    </div>
+
+    <!-- The difference on these two examples is the "style=display:non;" -->
+
+    <h3> To hide the text onclick</h3>
+    <div onclick="hideText()" style="cursor: pointer;">
+      Click here.
+    </div>
+    <div class="divMsgHide" style="background-color: green; color: white;"> This is a Testing......
+    </div>
+
+    <h3> To hide/show "toggle" effect, text onclick</h3>
+    <div onclick="toggleEffect()" style="cursor: pointer;">
+      Click here.
+    </div>
+    <div class="divMsgToggle" style="background-color: green; color: white;"> This is a Testing......
+    </div>
+
+    <h3> To slide up/down and hide, text onclick</h3>
+    <div onclick="slideUp()" style="cursor: pointer;">
+      Click here.
+    </div>
+    <div class="divMsgSlideUp" style="background-color: green; color:white; margin-top:10px; width:150px; height:150px"> This is a Testing......
+    </div>
+
+    <h3> To slide up/down and hide, continue...</h3>
+    <div onclick="slideDown()" style="cursor: pointer;">
+      Click here.
+    </div>
+    <div class="divMsgSlideDown" style="background-color: green; color:white; display:none; margin-top:10px; width:150px; height:150px"> This is a Testing......
+    </div>
+
+    <br><br>
+    <h3>The insertBefor() is inserted as the method says, before the click here.</h3>
+    <div id="divinsertBefore" onclick="insertBeforeHtml()" style="cursor:pointer; color:red;">
+      Click Here.
+    </div>
+
+    <br><br>
+    <h3>the .is() is used as a conditional statement.</h3>
+    <p>To see if the right radio is picked,</p>
+    <div id="divChkGender" onclick="checkGenger()" style="cursor:pointer; color:red;">
+      Click Here
+    </div>
+    <input type="radio" id="inputChkMale" name="sex" value="male" >
+    Male</input><br>
+    <input type="radio" name="sex" value="female" id="inputChkFemale">
+    Female</input>
+
+    <br><br>
+    <h3>using replaceWith() method</h3>
+    <p id="replaceWith"> This texet wiill be replace once the button in clicked</p>
+    <input type="button" name="replaceText" value="Replace" onclick="replaceWith()">
+
+    <br><br>
+    <h3>Get the number of boxes checked</h3>
+    <input type="button" onclick="getChkdCount()" value="Click Here" style="color:green;" ><br>
+    <input type="checkbox" value="Apple" checked="checked">
+    Apple
+    <input type="checkbox" value="Banana">
+    Banana
+    <input type="checkbox" value="Peach">
+    Peach
+    <input type="checkbox" value="Mango">
+    Mango
+
+    <br><br>
+    <h3>Get the selected item's value</h3>
+    <input type="button" onclick="getSelectedValue()" value="Click Here" style="color:red;">
+    <select>
+      <option>First</option>
+      <option selected>Second</option>
+      <option>Third</option>
+    </select>
+
+
+    <br><br>
+    <p>End of page.</p>
+
 
 
   </div>

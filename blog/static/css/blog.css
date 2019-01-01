@@ -54,3 +54,7 @@
 .post h2 a:visited {
     color: #FF6347;
 }
+
+.redClass{
+  color:red; font-style:italic;
+  }
