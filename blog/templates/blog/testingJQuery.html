@@ -12,10 +12,10 @@
     </div>
 
     <h3>Selecting the first and last tag</h3>
-    <div id="tags">
-      <p>I love jQuery 1 time</p>
-      <p>I love jQuery 2 time</p>
-      <p>I love jQuery 3 time</p>
+    <div id="divTags">
+      <p id="pTags">I love jQuery 1 time</p>
+      <p id="pTags">I love jQuery 2 time</p>
+      <p id="pTags">I love jQuery 3 time</p>
     </div>
     <input type="button" value="Click Me" onclick="setCSS()"></input>
 
@@ -86,7 +86,7 @@
 
     <br><br>
     <h3>using replaceWith() method</h3>
-    <p id="replaceWith"> This texet wiill be replace once the button in clicked</p>
+    <p id="replaceWith"> This texet will be replace once the button in clicked</p>
     <input type="button" name="replaceText" value="Replace" onclick="replaceWith()">
 
     <br><br>
@@ -109,6 +109,28 @@
       <option selected>Second</option>
       <option>Third</option>
     </select>
+
+    <br><br>
+    <h3>event(function(){})</h3>
+    <input type="button" id="btnClick" value="Click Event" style="color:grey;">
+    <input type="button" id="btnMouseOver" value="Mouse Over Event" style="color:grey;">
+    <input type="button" id="btnMouseLeave" value="Mouse Leave Event" style="color:grey;">
+
+    <br><br>
+    <h3>event.keyCode = get the key code of a letter</h3>
+    <center>
+      <input type="text" onkeydown="getChar(event);">
+    </center>
+
+    <br><br>
+    <h3>mouseout() method will change options</h3>
+    <h2 id="mouseOutText">Ater mouse has moved, the text becomes orange.</h2>
+
+    <br><br>
+    <h3>toggleEffect function</h3>
+    <input type="button" value="Toggle" onclick="toggleEffectFunction()">Please click the button.
+    <p id="hideShowContent">This text will be shown and hidden.</p>
+
 
 
     <br><br>

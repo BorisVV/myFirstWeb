@@ -19,10 +19,11 @@ function changeColor() {
 }
 
 function setCSS() {
-  $('p:nth-child(1)').css("font-style", "italic")
-  $('p:nth-child(3)').css("font-style", "italic")
+  $('#pTags:nth-child(1)').css("font-style", "italic")
+  $('#pTags:nth-child(3)').css("font-style", "italic")
 }
 
+// redClass in the blog.css file
 function myFunction() {
   $('#addClasses').addClass("redClass");
 }
@@ -33,9 +34,14 @@ function showText() {
 function hideText() {
   $(".divMsgHide").hide();
 }
+//hide/show
 function toggleEffect() {
   $(".divMsgToggle").toggle();
 }
+function toggleEffectFunction(){
+  $("#hideShowContent").toggle(function(){});
+};
+
 function slideUp() {
   $(".divMsgSlideUp").slideUp();
 }
@@ -56,17 +62,42 @@ function checkGenger() {
   }
 }
 
-// .replaceWith()
+  // .replaceWith()
 function replaceWith() {
   $('#replaceWith').replaceWith("<p style='color:green;'>Hello, this is a new text!</p>")
 }
 
-// number of boxes checked.
+  // number of boxes checked.
 function getChkdCount() {
   alert($("input:checked").length);
 }
 
-// get the selected value.
+  // get the selected value.
 function getSelectedValue(){
   alert($("select option:selected").text());
 }
+
+  // event(function(){})
+$(document).ready(function(){
+  $("#btnClick").click(function(){
+    alert("I am a click event");
+  });
+  // $("#btnMouseOver").mouseover(function(){
+  //   alert("I am a mouse over event");
+  // });
+  // $("#btnMouseLeave").mouseleave(function(){
+  //   alert("I am a mouse leave event");
+  // });
+});
+
+  // event.keyCode (get the key of a char)
+// function getChar(event) {
+//   alert("key code is :" + event.keyCode);
+// }
+
+ //mouseout
+$(function(){
+  $("#mouseOutText").mouseout(function(){
+    $("#mouseOutText").css("color","orange");
+  });
+});
