@@ -97,3 +97,6 @@ def sign_up(request):
 
 def testing_JQuery(request):
     return render(request, 'blog/testingJQuery.html')
+
+def test_JQuery2(request):
+    return render(request, 'blog/testJQuery2.html')
