@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $("#divID").html("Hello World!");
+  $("#divTestJQuery").html("Hello World!");
 });
 
 // $(document).ready(function() {
@@ -101,3 +101,34 @@ $(function(){
     $("#mouseOutText").css("color","orange");
   });
 });
+
+//duration=slow, normal, fast or time in millisecs.
+//function (duration, callback)
+$(document).ready(function(){
+  $("#btnShow").click(function(){
+    $("#pShow").show("slow", function(){
+      alert("I am called after paragraph fully shown");
+    });
+  });
+});
+
+//duration=slow, normal, fast or time in millisecs.
+//function show (duration, callback) with Toggle.
+function toggleEffectShowFunc(){
+  $("#divMsgToggleShow").toggle("slow", function(){
+    alert("The goggle() method is copleted!");
+  });
+}
+
+//duration=slow, normal, fast or time in millisecs.
+//function (duration, callback) with Fadeout.
+function fadeoutDiv(){
+  $("#divFadeout").fadeOut(500, function(){});
+}
+// for fadeIn() option just change the fadeOut() to fadeIn().
+
+//duration=slow, normal, fast or time in millisecs.
+//function (duration, callback) with slideToggle.
+function slideToggleClick(){
+  $("#divSlideToggle").slideToggle(500, function(){});
+}

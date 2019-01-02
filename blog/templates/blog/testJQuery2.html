@@ -3,8 +3,42 @@
 {% block content %}
   <br>
   <h3>Test page</h3>
-  <div class="divTestJQuery">
+  <div id="divTestJQuery"></div>
 
+  <br>
+  <div>
+    <h3>Show (duration, callback)</h3>
+    <input type="button" name="" value="Show me!" id="btnShow">
+    <p id="pShow" style="display:none">This is a paragraph!</p>
   </div>
+
+  <br>
+  <div>
+    <h3>toggle with the show(duration, callback) function</h3>
+    <input type="button" value="Toggle between hide and show" onclick="toggleEffectShowFunc()">
+    <div id="divMsgToggleShow" style="background-color:green; color:white; width:100px; height:100px;">
+      I am a div
+    </div>
+  </div>
+
+  <br>
+  <div>
+    <h3>fadeout and show(duration, callback) function</h3>
+    <input type="button" value="Click to fadeout the div" onclick="fadeoutDiv()">
+    <div id="divFadeout" style="background-color:maroon; color:white; width:300px; height:200px;">
+      I am a maroon div
+    </div>  </div>
+    <!-- for the option of fadeIn() change the fadeout() -->
+
+  <br>
+  <div>
+    <h3>slideToggle(duration, callback) function</h3>
+    <input type="button" value="Slide Toggle the div" onclick="slideToggleClick()">
+    <div id="divSlideToggle" style="background-color:green; color:white; width:300px; height:200px;">
+      I am a div
+    </div>
+  </div>
+
+
 
 {% endblock %}
