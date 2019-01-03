@@ -55,6 +55,15 @@
     color: #FF6347;
 }
 
+/* jQueries */
 .redClass{
   color:red; font-style:italic;
   }
+
+#divPanelYellow {
+  position: relative;
+  width: 100px; height: 100px;
+  border: 1px solid #000000;
+  background: yellow;
+  cursor: pointer;
+}

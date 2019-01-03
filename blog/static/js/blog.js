@@ -132,3 +132,28 @@ function fadeoutDiv(){
 function slideToggleClick(){
   $("#divSlideToggle").slideToggle(500, function(){});
 }
+
+//animation #divPanelYellow
+$(function(){
+  $("#divPanelYellow").css("opacity", "0.8");
+  $("#divPanelYellow").click(function(){
+    $(this).animate({left:"400px", height:"200px", opacity:"1"},3000).animate({top:"200px", width:"200px"},3000).animate({left:"1px", top:"1px", width:"200", height:"200"},3000)
+  });
+});
+// The other option to fadeOut at the end is to add the ...height:"200"},3000).fadeOut("slow") above.
+
+//looping with each.
+function loopWithEach(){
+  $("ul li").each(function(){
+    $(this).css("color", "red");
+  });
+}
+
+//making an array list .reverse()
+function makeArray(){
+  var obj = $(".liArray");
+  var myArray = $.makeArray(obj);
+  myArray.reverse();
+  $(".divArray ul").html(myArray);
+}
+//Fix the problem with making all li arrays and that is not what I want.
