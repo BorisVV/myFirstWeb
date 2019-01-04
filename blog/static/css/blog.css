@@ -1,21 +1,17 @@
 
-.body-content {
+body{
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 30px;
+}
+
+.signUpline a, p{
+  float:right; color:green; font-size:20pt;
 }
 
 .page-header {
     background-color: #ff9400;
     font-family: 'Lobster', cursive;
-    margin-left: 20px;
-    margin-top: 5;
     padding: 20px 20px 20px 20px;
-}
-
-.top-right {
-  font-size: 30pt;
-  color: #ffffff;
-  float: right;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {

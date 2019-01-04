@@ -14,24 +14,25 @@
     <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
   </head>
   <body>
-    <div class="body-content">
+    <div class="container-fluid">
       <div class="page-header">
         <a href="{% url 'post_draft_list' %}" class="top-right"><span class="glyphicon glyphicon-edit"></span></a>
-        <h1><a href="{% url 'home' %}">My First Website</a></h1>
+        <a class="top-right" href="{% url 'home' %}" style="float:right; font-size:20pt;">Home Page</a>
+        <center>
+          <h1><a href="{% url 'home' %}">My First Website</a></h1>
+        </center>
       </div>
-      <div class="top-menu">
-         {% block authenticate %}
-           {% if user.is_authenticated %}
-            <p>User: {{ user.get_username }}</p>
-            <a href="{% url 'logout' %}?next={{request.path}}">Logout</a><br>
-            <a href="{% url 'home' %}" class="">Go to Home Page</a>
-           {% else %}
-            <a href="{% url 'sign_up' %}">Signup</a> /
-            <a href="{% url 'login' %}">Login</a> /
-            <a href="{% url 'home' %}" class="">Go to Home Page</a>
-           {% endif %}
-         {% endblock %}
+      <div class="signUpline">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}?next={{request.path}}">/Logout</a>
+        <p>User: {{ user.get_username }}</p>
+        {% else %}
+        <a href="{% url 'sign_up' %}">Signup</a>
+        <a href="{% url 'login' %}">Login/</a>
+        {% endif %}
       </div>
+
+      <br>
       <div class="content">
         <ul>
           {% if messages %}
@@ -39,11 +40,10 @@
             <li class="{{ message.tags }}">{{ message|safe }}</li>
           {% endfor %}
           {% endif %}
-
-          {% block content %}
-          {% endblock %}
         </ul>
       </div>
+      {% block content %}
+      {% endblock %}
     </div>
   </body>
 </html>
