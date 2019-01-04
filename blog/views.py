@@ -100,3 +100,6 @@ def testing_JQuery(request):
 
 def test_JQuery2(request):
     return render(request, 'blog/testJQuery2.html')
+
+def learn_css(request):
+    return render(request, 'blog/practiceLearningCSS.html')
