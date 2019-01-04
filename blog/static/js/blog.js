@@ -144,7 +144,7 @@ $(function(){
 
 //looping with each.
 function loopWithEach(){
-  $("ul li").each(function(){
+  $("#ulLoopWEach li").each(function(){
     $(this).css("color", "red");
   });
 }
@@ -157,3 +157,15 @@ function makeArray(){
   $(".divArray ul").html(myArray);
 }
 //Fix the problem with making all li arrays and that is not what I want.
+
+//.trim() option to remove spaces for example.
+$(document).ready(function(){
+  // var str = "   Hello  World!";
+  var str = "   Hello   World!";
+  $("#pAfterTrimParagraph").html("After trim: " + $.trim(str));
+});
+
+//.<marquee>tag
+$(document).ready(function(){
+  $(".divShowMarquee").html("<marquee><h3>"+"Hello! Welcome to JQuery world! Learning JQuery easily and fast!</h3></marquee>");
+});
