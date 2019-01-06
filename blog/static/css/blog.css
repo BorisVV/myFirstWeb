@@ -4,7 +4,7 @@ body{
   padding-right: 30px;
 }
 
-.signUpline a, p{
+.signUpline a, #userName{
   float:right; color:green; font-size:20pt;
 }
 
@@ -52,7 +52,62 @@ body{
 }
 
 /* css sampling from book */
+/* div#box1 {
+  margin: 20px; padding: 10px; border: 5px solid black;
+  width: 100px; height: 100px;
+  text-align: justify; float: left;
+}
+div#box2 {
+  margin: 20px; padding: 50px; border: 5px solid black;
+  width: 100px; height: 100px;
+  text-align: left; float: left;
+} */
 
+.divBoxes {
+  padding: 5px;
+  border: 1px dashed black;
+  margin: 5px;
+  float: left;
+  /* background-color: green; */
+}
+
+#box1{
+  width: 60px;
+  height: 100px;
+}
+#box2{
+  width: 100x;
+  height: 40px;
+}
+#box3{
+  width: 50px;
+  height: 150px;
+}
+#box4{
+  width: 40px;
+  height: 50px;
+}
+#box5{
+  position: fixed;
+  width: 150px;
+  height: 120px;
+  right: 0;
+  bottom: 0;
+}
+#box6{
+  width: 120px;
+  height: 70px;
+}
+#box7{
+  width: 25px;
+  height: 80px;
+}
+
+img {
+  float: right;
+  width: 50%;
+  height: 80px;
+}
 
 /* jQueries */
 .redClass{
