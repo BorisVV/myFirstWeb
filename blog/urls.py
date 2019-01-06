@@ -20,4 +20,5 @@ urlpatterns = [
     'test_JQuery2'),
     url(r'^learn_css/', views.learn_css, name=
     'learn_css'),
+    url(r'^practice_CSS2/', views.practice_CSS2, name='practice_CSS2'),
 ]

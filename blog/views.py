@@ -103,3 +103,6 @@ def test_JQuery2(request):
 
 def learn_css(request):
     return render(request, 'blog/practiceLearningCSS.html')
+
+def practice_CSS2(request):
+    return render(request, 'blog/practiceCSS2.html')
