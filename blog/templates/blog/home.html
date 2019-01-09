@@ -2,16 +2,27 @@
 
 {% block content %}
   <div class="divHome">
-    <a href="{% url 'post_new' %}" class="">Add new posts <span class="glyphicon glyphicon-plus"></span></a><br>
-    <a href="{% url 'post_list' %}">Post list</a>
-    <br>
-    <a href="{% url 'testing_JQuery' %}"> Test JQuery Page</a>
-    <br>
-    <a href="{% url 'test_JQuery2' %}"> Test JQuery Page 2</a>
-    <br>
-    <a href="{% url 'learn_css' %}">Learning CSS</a>
-    <br>
-    <a href="{% url 'practice_CSS2' %}">Learning CSS</a>
+    <ul>
+      <li>
+        <a href="{% url 'post_new' %}" class="">Add new posts <span class="glyphicon glyphicon-plus"></span></a><br>
+      </li>
+      <li>
+        <a href="{% url 'post_list' %}">Post list</a>
+      </li>
+      <li>
+        <a href="{% url 'testing_JQuery' %}"> Test JQuery Page</a>
+      </li>
+      <li>
+        <a href="{% url 'test_JQuery2' %}"> Test JQuery Page 2</a>
+      </li>
+      <li>
+        <a href="{% url 'learn_css' %}">Learning CSS</a>
+      </li>
+      <li>
+        <a href="{% url 'practice_CSS2' %}">practice_CSS2</a>
+      </li>
+    </ul>
+
   </div>
 
 {% endblock %}

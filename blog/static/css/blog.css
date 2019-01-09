@@ -1,7 +1,27 @@
 
-body{
-  padding-left: 20px;
-  padding-right: 30px;
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+/* homepage */
+.divHome {
+  background-color: #58FAAC;
+  border: 1px dotted black;
+}
+.divHome ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 2% 35%;
+  text-align: center;
+}
+.divHome li {
+  margin: 3px;
+  border-style: inset;
+  border-color: #0080FF;
+  padding: 2px;
+  background-color: #F4FA58;
+  font-weight: bold;
 }
 
 .signUpline a, #userName{
@@ -109,7 +129,67 @@ div#box2 {
   height: 80px;
 }
 
-/* jQueries */
+                      /* practice_CSS2 */
+
+/* This is used for animation see .content:hover below */
+@keyframes myExample {
+  from {color: black;}
+  to {color: red;}
+}
+.pageheader, .pagefooter {
+  clear: both;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+.column {
+  float: left;
+}
+.menu {
+  width: 25%;
+  padding: 10px;
+}
+.content {
+  width: 75%;
+}
+/* Using @keyframes examples. */
+.content:hover {
+  animation-name: myExample;
+  animation-duration: 2s;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: blue;
+  color: aqua;
+  text-decoration: bold;
+  text-align: center;
+}
+.news {
+  position: sticky;
+  background-color: yellow;
+  text-align: center;
+  top: 20px;
+  margin: 0px 5%;
+  height: 20px;
+  width: 90%;
+  border: 2px dashed green;
+}
+/* .fixedOption {
+  position: fixed;
+  background-color: red;
+  text-align: center;
+  text-decoration: bold;
+  color: white;
+  bottom: 20px;
+} */
+
+                    /* jQueries */
 .redClass{
   color:red; font-style:italic;
   }

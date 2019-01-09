@@ -1,1 +1,39 @@
+{% extends 'blog/base.html' %}
 
+{% block title %}<title>practice_CSS2</title>{% endblock %}
+
+{% block content %}
+<!-- example1 -->
+<div style="background-color:green; width:100%; height:50px;"></div>
+
+<!-- example2 -->
+<div class="news">
+  This could tell users about a cool new update for a site!
+</div>
+<div class="pageheader">
+  <h1>The header for a webpage!</h1>
+</div>
+<div class="column menu">
+  <ul>
+    <li>An item in a page menu</li>
+    <li>A second item in a page menu</li>
+    <li>A third item in a page menu</li>
+    <li>A fourth item in a page menu</li>
+    <li>A fifth item in a page menu</li>
+  </ul>
+</div>
+<div class="column content">
+  <h1>This could be a heading for some content on the page</h1>
+  <p>This paragraph could welcome users to the website.</p>
+  <p>This could be an intersting paragraph about a hbby or an interest that your the page is about.</p>
+  <p>This could be a followup paragraph for the first.</p>
+  <p>This paragraph could giveusers some instructions onhow to navigate the website.</p>
+</div>
+<!-- <div class="fixedOption">
+  This box will always show at the bottom of the page.
+</div> -->
+<div class="pagefooter">
+  <p>Here is some text in the footer of the webpage!</p>
+</div>
+
+{% endblock %}
