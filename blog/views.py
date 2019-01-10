@@ -106,3 +106,6 @@ def learn_css(request):
 
 def practice_CSS2(request):
     return render(request, 'blog/practiceCSS2.html')
+
+def samplesBootstrap1(request):
+    return render(request, 'blog/samplesBootstrap1.html')
