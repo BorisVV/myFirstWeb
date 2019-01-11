@@ -1,17 +1,25 @@
 {% load staticfiles %}
+
+<!DOCTYPE html>
+
 <html>
   <head>
-    <title>{% block title %}First Website{% endblock %}</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
 
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+    <!-- Title of the the web page. -->
+    <title>{% block title %}First Website{% endblock %}</title>
+
+    <link rel="icon" href="data:;base64,=">
+    <!--The above and below lines should be removed for productions.-->
+    <!--This next lines incase the above one did not work on the environment aws3-->
+    <!--<link rel="shortcut icon" href="">-->
+
+    <!-- This is the Bootstrap CDN option, which is faster and uses cache to save time when revisiting. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- For the CSS and Script files. -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
   </head>
   <body>
     <div class="container-fluid">
@@ -37,14 +45,23 @@
         <ul>
           {% if messages %}
           {% for message in messages %}
-            <li class="{{ message.tags }}">{{ message|safe }}</li>
+          <li class="{{ message.tags }}">{{ message|safe }}</li>
           {% endfor %}
           {% endif %}
         </ul>
       </div>
       <br>
-      {% block content %}
-      {% endblock %}
     </div>
+
+    {% block content %}
+    {% endblock %}
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
