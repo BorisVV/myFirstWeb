@@ -42,10 +42,11 @@ function toggleEffectFunction(){
   $("#hideShowContent").toggle(function(){});
 };
 
-function slideUp() {
+function slideUpOption() {
   $(".divMsgSlideUp").slideUp();
 }
-function slideDown() {
+
+function slideDownOption() {
   $(".divMsgSlideDown").slideDown();
 }
 

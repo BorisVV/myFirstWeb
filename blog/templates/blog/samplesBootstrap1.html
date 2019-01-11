@@ -7,19 +7,21 @@
 
   <div class="container">
     <h1>Hello World!</h1>
-    <div class="row">
+    <div class="row divMarging">
       <div class="col-sm-6">Left Column</div>
       <div class="col-sm-6">Right Column</div>
     </div>
 
     <!-- Add an image. -->
-    <figure class="figure">
-      <img src="{% static 'img/sample_landScape.jpg'%}" class="figure-img img-fluid rounded" alt="image"><figcaption class="figure-caption">A caption for the above image.</figcaption>
-    </figure>
+    <div class="divMarging">
+      <figure class="figure">
+        <img src="{% static 'img/sample_landScape.jpg'%}" class="figure-img img-fluid rounded" alt="image"><figcaption class="figure-caption">A caption for the above image.</figcaption>
+      </figure>
+    </div>
 
     <!-- Using media -->
-    <div class="media">
-      <img src="{% static 'img/sample_landScape1.jpg' %}" class="mr-3" alt="image">
+    <div class="media divMarging">
+      <img src="{% static 'img/halloween_pic.png' %}" class="mr-3" alt="image">
       <div class="media-body">
         <h5 class="mt-0">Media heading</h5>
         Media object description text.
@@ -34,7 +36,6 @@
     <var>Used to display math variables</var>
     <kbd>Used to display deyboard input</kbd>
     <samp>Used to display sample output</samp>
-
   </div>
 
   <nav class="navbar navbar-toggleable-md navbar-dark bg-primary">
