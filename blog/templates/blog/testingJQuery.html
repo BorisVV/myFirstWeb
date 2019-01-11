@@ -1,142 +1,157 @@
 {% extends 'blog/base.html'%}
 
 {% block content %}
-  <br>
-  <div class="container-fluid"  >
+  <div class="container"  >
     <h3>Testing jQuery</h3>
-    <div class="" id="divTestJQuery"></div>
+    <div class="" id="divtestJQuery"></div>
 
-    <h3>Changing the background color on click</h3>
-    <div id="divTest" onclick="changeColor()" style="cursor: pointer; width: 300px; Height: 20px; background-color: #cccccc;">
-    Click here to change the background color.
+    <div class="divtestJQuery">
+      <h3>Changing the background color on click</h3>
+      <p id="divTest" onclick="changeColor()" style="cursor: pointer; width: 325px; Height: 20px; background-color: #cccccc;">
+        Click here to change the background color.
+      </p>
     </div>
 
-    <h3>Selecting the first and last tag</h3>
-    <div id="divTags">
-      <p id="pTags">I love jQuery 1 time</p>
-      <p id="pTags">I love jQuery 2 time</p>
-      <p id="pTags">I love jQuery 3 time</p>
-    </div>
-    <input type="button" value="Click Me" onclick="setCSS()"></input>
-
-    <br><br>
-    <h3>Change color and font function.</h3>
-    <div id="addClasses">
-      <p>PHP in 8 Hours</p>
-      <p>JQuery in 8 Hours</p>
-      <p>JavaScript in 8 Hours</p>
-    </div>
-    <form>
-      <input type="button" name="" value="Add Color" onclick="myFunction()"></input>
-    </form>
-
-    <h3>Show the text onclick</h3>
-    <div onclick="showText()" style="cursor: pointer;">
-      Click here.
-    </div>
-    <div class="divMsgShow" style="background-color: green; display: none; color: white;"> This is a Testing......
+    <div class="divtestJQuery">
+      <h3>Selecting the first and last tag</h3>
+      <div id="divTags">
+        <p class="pTags">I love jQuery 1 time</p>
+        <p class="pTags">I love jQuery 2 time</p>
+        <p class="pTags">I love jQuery 3 time</p>
+      </div>
+      <input type="button" value="Click Me" onclick="setCSS()"></input>
     </div>
 
-    <!-- The difference on these two examples is the "style=display:non;" -->
-
-    <h3> To hide the text onclick</h3>
-    <div onclick="hideText()" style="cursor: pointer;">
-      Click here.
-    </div>
-    <div class="divMsgHide" style="background-color: green; color: white;"> This is a Testing......
-    </div>
-
-    <h3> To hide/show "toggle" effect, text onclick</h3>
-    <div onclick="toggleEffect()" style="cursor: pointer;">
-      Click here.
-    </div>
-    <div class="divMsgToggle" style="background-color: green; color: white;"> This is a Testing......
+    <div class="divtestJQuery">
+      <h3>Change color and font function.</h3>
+      <div id="addClasses">
+        <p>PHP in 8 Hours</p>
+        <p>JQuery in 8 Hours</p>
+        <p>JavaScript in 8 Hours</p>
+      </div>
+      <form>
+        <input type="button" name="" value="Add Color" onclick="myFunction()"></input>
+      </form>
     </div>
 
-    <h3> To slide up/down and hide, text onclick</h3>
-    <div onclick="slideUp()" style="cursor: pointer;">
-      Click here.
-    </div>
-    <div class="divMsgSlideUp" style="background-color: green; color:white; margin-top:10px; width:150px; height:150px"> This is a Testing......
-    </div>
-
-    <h3> To slide up/down and hide, continue...</h3>
-    <div onclick="slideDown()" style="cursor: pointer;">
-      Click here.
-    </div>
-    <div class="divMsgSlideDown" style="background-color: green; color:white; display:none; margin-top:10px; width:150px; height:150px"> This is a Testing......
+    <div class="divtestJQuery">
+      <h3>Show the text onclick</h3>
+      <div onclick="showText()" style="cursor: pointer;">
+        Click here.
+      </div>
+      <div class="divMsgShow" style="background-color: green; display: none; color: white;"> This is a Testing......
+      </div>
     </div>
 
-    <br><br>
-    <h3>The insertBefor() is inserted as the method says, before the click here.</h3>
-    <div id="divinsertBefore" onclick="insertBeforeHtml()" style="cursor:pointer; color:red;">
-      Click Here.
+    <div class="divtestJQuery">
+      <!-- The difference on these two examples is the "style=display:non;" -->
+      <h3> To hide the text onclick</h3>
+      <div onclick="hideText()" style="cursor: pointer;">
+        Click here.
+      </div>
+      <div class="divMsgHide" style="background-color: green; color: white;"> This is a Testing......
+      </div>
     </div>
 
-    <br><br>
-    <h3>the .is() is used as a conditional statement.</h3>
-    <p>To see if the right radio is picked,</p>
-    <div id="divChkGender" onclick="checkGenger()" style="cursor:pointer; color:red;">
-      Click Here
+    <div class="divtestJQuery">
+      <h3> To hide/show "toggle" effect, text onclick</h3>
+      <div onclick="toggleEffect()" style="cursor: pointer;">
+        Click here.
+      </div>
+      <div class="divMsgToggle" style="background-color: green; color: white;"> This is a Testing......
+      </div>
     </div>
-    <input type="radio" id="inputChkMale" name="sex" value="male" >
-    Male</input><br>
-    <input type="radio" name="sex" value="female" id="inputChkFemale">
-    Female</input>
 
-    <br><br>
-    <h3>using replaceWith() method</h3>
-    <p id="replaceWith"> This texet will be replace once the button in clicked</p>
-    <input type="button" name="replaceText" value="Replace" onclick="replaceWith()">
+    <div class="divtestJQuery">
+      <h3> To slide up/down and hide, text onclick</h3>
+      <div onclick="slideUp()" style="cursor: pointer;">
+        Click here.
+      </div>
+      <div class="divMsgSlideUp" style="background-color: green; color:white; margin-top:10px; width:150px; height:150px"> This is a Testing......
+      </div>
+    </div>
 
-    <br><br>
-    <h3>Get the number of boxes checked</h3>
-    <input type="button" onclick="getChkdCount()" value="Click Here" style="color:green;" ><br>
-    <input type="checkbox" value="Apple" checked="checked">
-    Apple
-    <input type="checkbox" value="Banana">
-    Banana
-    <input type="checkbox" value="Peach">
-    Peach
-    <input type="checkbox" value="Mango">
-    Mango
+    <div class="divtestJQuery">
+      <h3> To slide up/down and hide, continue...</h3>
+      <div onclick="slideDown()" style="cursor: pointer;">
+        Click here.
+      </div>
+      <div class="divMsgSlideDown" style="background-color: green; color:white; display:none; margin-top:10px; width:150px; height:150px"> This is a Testing......
+      </div>
+    </div>
 
-    <br><br>
-    <h3>Get the selected item's value</h3>
-    <input type="button" onclick="getSelectedValue()" value="Click Here" style="color:red;">
-    <select>
-      <option>First</option>
-      <option selected>Second</option>
-      <option>Third</option>
-    </select>
+    <div class="divtestJQuery">
+      <h3>The insertBefor() is inserted as the method says, before the click here.</h3>
+      <div id="divinsertBefore" onclick="insertBeforeHtml()" style="cursor:pointer; color:red;">
+        Click Here.
+      </div>
+    </div>
 
-    <br><br>
-    <h3>event(function(){})</h3>
-    <input type="button" id="btnClick" value="Click Event" style="color:grey;">
-    <input type="button" id="btnMouseOver" value="Mouse Over Event" style="color:grey;">
-    <input type="button" id="btnMouseLeave" value="Mouse Leave Event" style="color:grey;">
+    <div class="divtestJQuery">
+      <h3>the .is() is used as a conditional statement.</h3>
+      <p>To see if the right radio is picked,</p>
+      <div id="divChkGender" onclick="checkGenger()" style="cursor:pointer; color:red;">
+        Click Here
+      </div>
+      <input type="radio" id="inputChkMale" name="sex" value="male" >
+      Male</input><br>
+      <input type="radio" name="sex" value="female" id="inputChkFemale">
+      Female</input>
+    </div>
 
-    <br><br>
-    <h3>event.keyCode = get the key code of a letter</h3>
-    <center>
+    <div class="divtestJQuery">
+      <h3>using replaceWith() method</h3>
+      <p id="replaceWith"> This texet will be replace once the button in clicked</p>
+      <input type="button" name="replaceText" value="Replace" onclick="replaceWith()">
+    </div>
+
+    <div class="divtestJQuery">
+      <h3>Get the number of boxes checked</h3>
+      <input type="button" onclick="getChkdCount()" value="Click Here" style="color:green;" ><br>
+      <input type="checkbox" value="Apple" checked="checked">
+      Apple
+      <input type="checkbox" value="Banana">
+      Banana
+      <input type="checkbox" value="Peach">
+      Peach
+      <input type="checkbox" value="Mango">
+      Mango
+    </div>
+
+    <div class="divtestJQuery">
+      <h3>Get the selected item's value</h3>
+      <input type="button" onclick="getSelectedValue()" value="Click Here" style="color:red;">
+      <select>
+        <option>First</option>
+        <option selected>Second</option>
+        <option>Third</option>
+      </select>
+    </div>
+
+    <div class="divtestJQuery">
+      <h3>event(function(){})</h3>
+      <input type="button" id="btnClick" value="Click Event" style="color:grey;">
+      <input type="button" id="btnMouseOver" value="Mouse Over Event" style="color:grey;">
+      <input type="button" id="btnMouseLeave" value="Mouse Leave Event" style="color:grey;">
+    </div>
+
+    <div class="divtestJQuery">
+      <h3>event.keyCode = get the key code of a letter</h3>
       <input type="text" onkeydown="getChar(event);">
-    </center>
+    </div>
 
-    <br><br>
-    <h3>mouseout() method will change options</h3>
-    <h2 id="mouseOutText">Ater mouse has moved, the text becomes orange.</h2>
+    <div class="divtestJQuery">
+      <h3>mouseout() method will change options</h3>
+      <h2 id="mouseOutText">Ater mouse has moved, the text becomes orange.</h2>
+    </div>
 
-    <br><br>
-    <h3>toggleEffect function</h3>
-    <input type="button" value="Toggle" onclick="toggleEffectFunction()">Please click the button.
-    <p id="hideShowContent">This text will be shown and hidden.</p>
-
-
+    <div class="divtestJQuery">
+      <h3>toggleEffect function</h3>
+      <input type="button" value="Toggle" onclick="toggleEffectFunction()">Please click the button.
+      <p id="hideShowContent">This text will be shown and hidden.</p>
+    </div>
 
     <br><br>
     <p>End of page.</p>
-
-
-
   </div>
 {% endblock %}

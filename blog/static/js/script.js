@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $("#divTestJQuery").html("Hello World!");
+  $("#divtestJQuery").html("Hello World!");
 });
 
 // $(document).ready(function() {
@@ -19,8 +19,8 @@ function changeColor() {
 }
 
 function setCSS() {
-  $('#pTags:nth-child(1)').css("font-style", "italic")
-  $('#pTags:nth-child(3)').css("font-style", "italic")
+  $('.pTags:nth-child(1)').css("font-style", "italic")
+  $('.pTags:nth-child(3)').css("font-style", "italic")
 }
 
 // redClass in the blog.css file
