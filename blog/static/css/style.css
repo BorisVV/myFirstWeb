@@ -4,6 +4,40 @@ html, body{
   width: 100%;
 }
 
+/* BaseHtml page */
+.divBaseHeader {
+  background-color: #ff9400;
+  font-family: cursive;
+  text-decoration: none;
+}
+.homeLink{
+  padding-right: 15px;
+  padding-top: 30px;
+}
+.titleSite {
+  padding-top: 1px;
+  padding-bottom: 50px;
+}
+.aHomePageLink{
+  background-color: white;
+  font-size: 20pt;
+  float: right;
+
+}
+
+.divBaseHeader h1, .divBaseHeader h1 a, .divBaseHeader h1 a:visited, .divBaseHeader h1 a:active {
+  color: #ffffff;
+  font-size: 36pt;
+}
+
+
+.signUpline a, #userName{
+  color:green;
+  font-size:20pt;
+  float:right;
+  padding-right: 10px;
+}
+
 /* homepage */
 .divHome {
   background-color: #58FAAC;
@@ -24,21 +58,6 @@ html, body{
   font-weight: bold;
 }
 
-.signUpline a, #userName{
-  float:right; color:green; font-size:20pt;
-}
-
-.page-header {
-    background-color: #ff9400;
-    font-family: 'Lobster', cursive;
-    padding: 20px 20px 20px 20px;
-}
-
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
-}
 
 .date {
     color: #828282;
