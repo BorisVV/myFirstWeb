@@ -1,7 +1,7 @@
 {% extends 'blog/base.html'%}
 {% load static %}
 
-{% block title %}Bootstrap1{% endblock %}
+{% block title %}SamplesBootstrap{% endblock %}
 
 {% block content %}
 
@@ -23,8 +23,8 @@
     <div class="media divMarging">
       <img src="{% static 'img/halloween_pic.png' %}" class="mr-3" alt="image">
       <div class="media-body">
-        <h5 class="mt-0">Media heading</h5>
-        Media object description text.
+        <h5 class="mt-0">Media heading...</h5>
+        Media object description text...
       </div>
     </div>
 
@@ -33,11 +33,12 @@
     <pre class="pre-scrollable">
       Display multiple lines of code. Use .pre-scrollable class to set a max-height of 340px and provide a y-axis scrollbar.
     </pre>
-    <var>Used to display math variables</var>
-    <kbd>Used to display deyboard input</kbd>
+    <var>Used to display math variables</var><br>
+    <kbd>Used to display keyboard input</kbd><br>
     <samp>Used to display sample output</samp>
   </div>
 
+  <br>
   <nav class="navbar navbar-toggleable-md navbar-dark bg-primary">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -63,6 +64,7 @@
     </div>
   </nav>
 
+  <br>
   <div class="container">
     <!-- Button trigger modal. -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" name="buttonTrigger">Launch demo modal</button>
